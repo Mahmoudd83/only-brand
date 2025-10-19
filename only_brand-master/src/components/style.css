@@ -1,0 +1,20 @@
+/* تخصيص مكان الأسهم في الموبايل */
+@media (max-width: 640px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    bottom: -50px; /* تحديد المسافة من الأسفل */
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5); /* يمكنك تعديل لون الخلفية */
+    padding: 10px;
+    border-radius: 50%;
+  }
+
+  .swiper-button-next {
+    right: 10px; /* تخصيص مكان السهم الأيمن */
+  }
+
+  .swiper-button-prev {
+    left: 10px; /* تخصيص مكان السهم الأيسر */
+  }
+}

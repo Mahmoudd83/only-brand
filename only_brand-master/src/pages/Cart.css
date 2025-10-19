@@ -1,0 +1,240 @@
+/* DetailsCart.css */
+.details-cart-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.cart-details {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cart-item {
+  display: flex;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 3;
+  align-items: center;
+}
+
+.product-image {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.price-and-delivery {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.delivery-info {
+  color: #28a745;
+  font-size: 0.9rem;
+}
+
+.delivery-day {
+  font-weight: bold;
+}
+
+.tomorrow {
+  background-color: red;
+  color: white;
+  padding: 0 5px;
+  margin-left: 5px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.remove-button,
+.wishlist-button {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.remove-button:hover,
+.wishlist-button:hover {
+  color: red;
+}
+.pieces-select {
+  padding: 5px;
+  font-size: 0.9rem;
+}
+
+.checkout-summary {
+  flex: 1;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.coupon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.coupon-input {
+  width: 70%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.apply-button {
+  padding: 8px 12px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.summary-info p {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.checkout-button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .cart-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* تأكد من توازن العناصر */
+    }
+
+    .cart-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        width: 100%;
+        /* تأكد من ملئ العرض الكامل */
+    }
+
+    .product-image {
+        width: 100%;
+        max-width: 150px;
+        /* جعل الصورة أصغر على الشاشات الصغيرة */
+        margin: 0 auto 15px auto;
+    }
+
+    .product-info {
+        width: 90%;
+        /* تأكد من أن النص يتناسب مع العرض */
+        text-align: center;
+        /* محاذاة النص في المنتصف */
+    }
+
+    .actions {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        /* توازن الأزرار */
+    }
+
+    .remove-button,
+    .wishlist-button {
+        width: 80%;
+        /* جعل الأزرار أصغر ليتناسب مع الشاشة */
+        margin: 10px 0;
+        /* فاصل بين الأزرار */
+    }
+
+    .checkout-summary {
+        width: 90%;
+        /* عرض الشيك أوت ليناسب الحجم */
+       
+        text-align: center;
+        /* محاذاة النصوص في الشيك أوت */
+    }
+
+    .coupon-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coupon-input {
+        width: 80%;
+        /* جعل الحقل أصغر ليتناسب مع العرض */
+        margin-bottom: 10px;
+    }
+
+    .apply-button {
+        width: 80%;
+        /* جعل الزر أصغر */
+    }
+
+    .summary-info p {
+        font-size: 14px;
+        /* تصغير الخط عشان يتناسب مع الشاشات الصغيرة */
+    }
+}
+@media (max-width: 450px) {
+  .details-cart-container{
+    padding: 0;
+  }
+  .cart-details{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+  }
+}

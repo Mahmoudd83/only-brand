@@ -1,0 +1,26 @@
+/* التنسيق الأساسي للفوتر */
+footer {
+  background-color: #1E1E1E;
+  background-image: url('/public/images/logo/logo text.png');
+  /* ضع مسار الصورة هنا */
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+}
+
+/* تأثير خلفية داكنة فوق الصورة */
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.9);
+  z-index: 1;
+}
+

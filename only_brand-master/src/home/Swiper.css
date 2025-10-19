@@ -1,0 +1,145 @@
+/* تعديل المحتوى بحيث يكون في منتصف الصفحة */
+.slide-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 1200px;
+  height: 500px; /* زيادة ارتفاع الشريحة */
+  margin: 60px auto; /* مسافة 100 بكسل من جميع الجوانب */
+}
+
+/* تكبير حجم الصورة */
+.slide-image {
+  max-width: 100%; /* زيادة عرض الصورة */
+  max-height: 100%; /* التأكد من ملائمة الصورة للارتفاع */
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+/* تنسيق زر "SHOP NOW" */
+.slide-overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.shop-now-btn {
+  border: none;
+  padding: 10px 80px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+  word-spacing: 8px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+.shop-now-btn:hover{
+  transform: scale(1.02);
+  background-color: #e6e6e62b;
+  color: black;
+}
+/* تنسيق النقاط والسهمين */
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px; /* مسافة من أسفل الشريحة */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* مسافة بين السهمين والنقاط */
+}
+
+/* إعدادات الاستجابة */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .slide-content {
+    width: 90%; /* ضبط العرض ليتناسب مع التابلت */
+    height: 350px; /* تقليل ارتفاع الشريحة قليلاً */
+    margin: 40px auto; /* تقليل المسافة بين الشرائح */
+  }
+
+  .slide-image {
+    max-width: 100%; /* جعل الصورة تملأ الشريحة */
+    max-height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .slide-overlay {
+    bottom: 35px; /* تقليل المسافة بين الزر والأسفل */
+    right: 240px; /* تقليل المسافة بين الزر واليمين */
+  }
+  /* تكبير زر SHOP NOW ليكون أوضح */
+  .shop-now-btn {
+    font-size: 16px; /* تكبير الخط */
+  }
+
+  .slide-title {
+      font-size: 1.2rem;
+  }
+  /* تقليل المسافة بين النقاط والشريحة قليلاً */
+  .swiper-pagination {
+    bottom: 15px;
+  }
+
+  /* حجم النقاط */
+  
+
+  /* وضع السهمين بمحاذاة النقاط */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #000;
+    position: relative;
+    top: 0;
+  }
+}
+
+/* تنسيقات شاشة الموبايل */
+@media (max-width: 767px) {
+  .slide-content {
+    width: 100%; /* ملء الشاشة بالكامل */
+    height: 500px; /* زيادة ارتفاع الشريحة لتناسب عرض الصورة */
+    margin: 10px auto; /* تقليل المسافة العلوية والسفلية */
+  }
+
+  .slide-image {
+    max-width: 100%; /* جعل الصورة تملأ العرض بالكامل */
+    max-height: 95%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  /* تكبير زر SHOP NOW ليكون أكثر وضوحًا */
+  .shop-now-btn {
+    padding: 11px 87px 11px 85px;
+    font-size: 14px; /* حجم خط أصغر للموبايل */
+    margin-top: 10px; /* مسافة بسيطة بين الصورة والزر */
+  }
+  .slide-overlay{
+    right: 83px;
+    bottom: 30px;
+  }
+}
+
+
+/* إعدادات النقاط كخطوط */
+.swiper-pagination-bullet {
+  width: 40px;
+  /* عرض الخط */
+  height: 4px;    
+  /* ارتفاع الخط */
+  background-color: gray;
+  /* اللون الافتراضي */
+  opacity: 0.5;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+  border-radius: 0;
+  /* لإزالة الحواف الدائرية */
+  margin: 0 4px;
+  /* تباعد بين الخطوط */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: black;
+  /* اللون عند التفعيل */
+  opacity: 1;
+  width: 60px;
+  transform: lengthen 1s linear;
+}

@@ -1,0 +1,44 @@
+/* تنسيقات المدخلات */
+.custom-input .MuiOutlinedInput-root {
+    border-radius: 10px;
+    /* جعل الحواف مستديرة */
+    transition: all 0.3s ease;
+    /* تأثير انتقالي */
+}
+
+.custom-input .MuiOutlinedInput-root:hover {
+    border-color: #364436;
+    /* تغيير لون الحدود عند التمرير */
+}
+
+.custom-input .MuiOutlinedInput-root.Mui-focused {
+    border-color: #0c62a8;
+    /* تغيير لون الحدود عند التركيز */
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+    /* تأثير ظل */
+}
+/* تحديد عرض أكبر للفورم */
+.custom-width {
+    max-width: 800px;
+    /* يمكنك زيادة القيمة كما تريد */
+    width: 90%;
+    /* لضمان ملاءمة العرض للشاشات الصغيرة */
+}
+/* تأثير للزر */
+.btn-log  {
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn-log:hover {
+    transform: scale(1.02);
+    /* تكبير بسيط عند التمرير */
+    background-color: #e6e6e62b;
+    color: black;
+    /* لون خلفية جديد عند التمرير */
+}
+
+/* تحسين التصميم العام */
+body {
+    font-family: "Tajawal", sans-serif;
+    /* اختيار خط جميل */
+}

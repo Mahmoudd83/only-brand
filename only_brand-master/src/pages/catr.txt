@@ -1,0 +1,52 @@
+<div className="cart-item" key={product.id}>
+            <img
+              src={product.imageCover}
+              alt="Product"
+              className="product-image"
+            />
+            <div className="product-info">
+              <h3>{product.name}</h3>
+              <p>{product.title}</p>
+              <p>Size: 2XL</p>
+              <div className="price-and-delivery">
+                <span className="price">{product.price} EGY</span>
+                <span className="delivery-info">
+                  Free Delivery{" "}
+                  <span className="delivery-day tomorrow">
+                    GET IT <span>TOMORROW</span>
+                  </span>
+                </span>
+              </div>
+              <div className="actions">
+                <button
+                  className="remove-button"
+                  onClick={() => handleRemove(product.id)}
+                >
+                  <FaTrash />
+                  <span onClick={() => removeFromCart(product.id)}>Remove</span>
+                </button>
+                <button
+                  className="wishlist-button"
+                  onClick={() =>
+                    dispatch(
+                      addToWishlist({
+                        id: product.id,
+                        brand: product.brand,
+                        type: product.type,
+                        price: product.price,
+                        imageCover: product.imageCover,
+                      })
+                    )
+                  }
+                >
+                  <FaHeart />
+                  <span>Add To Wishlist</span>
+                </button>
+                <select className="pieces-select">
+                  <option>1 Piece</option>
+                  <option>2 Pieces</option>
+                  <option>3 Pieces</option>
+                </select>
+              </div>
+            </div>
+          </div>
