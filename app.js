@@ -39,9 +39,7 @@ app.use("/api/brand", BrandsRoute);
 app.use("/api/product", ProductRoute);
 
 // create error for route if route isn't correct
-app.all("*", (req, res, next) => {
-  next(new ApiError(`can't found this route: ${req.originalUrl}`, 400));
-});
+
 
 // global error handling middleware in express, only
 app.use(globalError);
